@@ -8,8 +8,8 @@ library(doParallel)
 cat(
 "This script finds non-linearly correlated gene-pairs from a gene expression matirx, 
 by calculating renyi/dCov correlation
-full result saved in ``
-samples of good gene-pair plots saved in flag1/ and flag2/ 
+full result saved in `results.csv`
+positive gene-pairs saved in flag1 and flag2 
 flag2 uses more strict filters
 
 * multiple CPUs will be used for faster processing
@@ -37,7 +37,7 @@ min_pearsonr = -0.1 #disabled
 max_pearsonr = 0.5 #Renyi:0.5; dCov: 0.4
 
 min_nl_corr_xy = 0.4 #flag1: renyi: 0.4-0.6; dCov: 0.2
-min_nl_ratio = 1.1 #flag2: renyi: 1.1-2; dCov: < 1.0
+min_nl_ratio = 1.5 #flag2: renyi: 1.1-2; dCov: < 1.0
 
 # folders
 getwd()
